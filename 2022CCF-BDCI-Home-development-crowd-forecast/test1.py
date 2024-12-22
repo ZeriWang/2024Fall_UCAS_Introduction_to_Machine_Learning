@@ -19,7 +19,7 @@ warnings.filterwarnings('ignore')
 
 train_data = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/dataTrain.csv')
 test_data = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/dataB.csv')
-submission = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/submit_example_A.csv')
+submission = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/submit_example_B.csv')
 data_nolabel = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/dataNoLabel.csv')
 
 
@@ -28,7 +28,7 @@ print(f'train_data.shape = {train_data.shape}\ntest_data.shape  = {test_data.sha
 
 train_data['f47'] = train_data['f1'] * 10 + train_data['f2']
 test_data['f47'] = test_data['f1'] * 10 + test_data['f2']
-# 暴力Feature 位置
+
 loc_f = ['f1', 'f2', 'f4', 'f5', 'f6']
 for df in [train_data, test_data]:
     for i in range(len(loc_f)):
@@ -38,7 +38,6 @@ for df in [train_data, test_data]:
             df[f'{loc_f[i]}*{loc_f[j]}'] = df[loc_f[i]] * df[loc_f[j]]
             df[f'{loc_f[i]}/{loc_f[j]}'] = df[loc_f[i]] / (df[loc_f[j]]+1)
 
-# 暴力Feature 通话
 com_f = ['f43', 'f44', 'f45', 'f46']
 for df in [train_data, test_data]:
     for i in range(len(com_f)):

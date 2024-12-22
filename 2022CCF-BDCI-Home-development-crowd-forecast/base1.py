@@ -27,7 +27,7 @@ warnings.filterwarnings('ignore')
 
 
 train_data = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/dataTrain.csv')
-test_data = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/dataA.csv')
+test_data = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/dataB.csv')
 submission = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/submit_example_A.csv')
 data_nolabel = pd.read_csv('/home/zeriwang/2024Fall/2024Fall_UCAS_ML/2024Fall_UCAS_Introduction_to_Machine_Learning/2022CCF-BDCI-Home-development-crowd-forecast/dataNoLabel.csv')
 
